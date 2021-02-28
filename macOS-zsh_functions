@@ -1,0 +1,20 @@
+function inv_file {
+        echo "Date: " $(date)
+        echo "File Info: " $(file $1)
+        echo "SHA256 Hash: " $(sha256 $1)
+        echo "ClamAV Scan:"
+        clamscan $1
+}
+
+function clearmeta {
+        echo "Original metadata: " $1
+        exiftool $1
+        echo "Clearing metadata from " $1
+        exiftool -all= $1
+        echo "Metadata after removal:"
+        exiftool $1
+}
+
+function keybase-rs2keybase {
+        # Personal data, so not including it here.
+}
