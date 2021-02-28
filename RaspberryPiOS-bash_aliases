@@ -1,0 +1,11 @@
+# Package Management
+alias install='sudo aptitude install -y'
+alias update='sudo apt-get update -o Acquire::ForceIPv4=true'
+alias upgrade='sudo apt-get upgrade -o Acquire::ForceIPv4=true; sudo /etc/init.d/rpimonitor update'
+alias clean='sudo aptitude clean'
+alias autoclean='sudo aptitude autoclean'
+alias autoremove='sudo apt-get autoremove'
+
+# Clear Screen
+alias c='clear'
+alias cls='clear'
