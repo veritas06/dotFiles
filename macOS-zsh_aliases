@@ -1,0 +1,39 @@
+# Run last command as sudo
+alias fuck='sudo $(history -p \!\!)'
+
+# Shorter Homebrew Commands, & include ClamAV when updating:
+alias update='brew update'
+alias upgrade='brew upgrade; freshclam'
+alias install='brew install'
+alias clean='brew cleanup'
+alias upd-all='brew update; brew upgrade; freshclam; brew cleanup'
+
+# Clear Screen options
+alias c='clear'
+alias cls='clear'
+
+# Generate SHA1,SHA256 Digest:
+alias sha1='openssl sha1'
+alias sha256='openssl sha256'
+
+# Extract TAR Files:
+alias untar='tar -xvzf'
+
+# Clear EXIF data from photos
+# alias clearmeta='exiftool -a'
+
+# Automatically run PowerShell without copyright info
+alias pwsh='pwsh -NoLogo'
+alias powershell='pwsh --nologo'
+
+# Shortened version of nslookup
+alias nsl='nslookup'
+
+# ClamAV Aliases:
+alias av-upd='freshclam'
+alias av-scan_home='clamscan -r --bell -i ~/'
+alias av-scan_sys='clamscan -r --bell -i /'
+alias clamscan='clamscan --infected --bell --recursive --detect-pua=yes --detect-structured=yes --structured-ssn-format=2'
+
+# Use youtube-dl to get an MP3 of a video:
+alias youtube-mp3='youtube-dl --extract-audio --audio-format mp3'
